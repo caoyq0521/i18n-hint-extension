@@ -59,7 +59,7 @@ title: t('business.statistics.column.projectType'), // 项目类型
 在插件目录下执行：
 
 ```bash
-cd .vscode-extension
+cd i18n-hint-extension
 npm install
 ```
 
@@ -71,7 +71,7 @@ npm run compile
 
 ### 3. 调试插件
 
-1. 在 VSCode 中打开 `.vscode-extension` 目录
+1. 在 VSCode 中打开 `i18n-hint-extension` 目录
 2. 按 `F5` 启动调试
 3. 在新打开的 VSCode 窗口中测试插件功能
 
@@ -90,7 +90,7 @@ vsce package
 ## 项目结构
 
 ```
-.vscode-extension/
+i18n-hint-extension/
 ├── src/
 │   ├── extension.ts           # 插件入口
 │   ├── translationLoader.ts   # 翻译文件加载器
