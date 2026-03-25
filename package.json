@@ -1,0 +1,61 @@
+{
+  "name": "i18n-hint-extension",
+  "displayName": "i18n 翻译提示",
+  "description": "在代码中显示 i18n 翻译的中文提示",
+  "version": "1.0.0",
+  "publisher": "caoyq0521",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:vue",
+    "onLanguage:javascript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "i18n 翻译提示",
+      "properties": {
+        "i18nHint.localesPath": {
+          "type": "string",
+          "default": "src/locales/lang",
+          "description": "翻译文件所在的相对路径"
+        },
+        "i18nHint.defaultLocale": {
+          "type": "string",
+          "default": "zh-CN",
+          "description": "默认显示的语言"
+        },
+        "i18nHint.enableInlineHints": {
+          "type": "boolean",
+          "default": true,
+          "description": "启用行内提示"
+        },
+        "i18nHint.enableHover": {
+          "type": "boolean",
+          "default": true,
+          "description": "启用悬停提示"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
